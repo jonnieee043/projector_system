@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projector Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="admin-page">
+
+    <div class="admin-container">
+
+        <header class="admin-header">
+
+            <div>
+                <h2>Projector Management</h2>
+                <p>Admin Dashboard</p>
+            </div>
+
+            <a href="/">Open Chatbot</a>
+
+        </header>
+
+        <section class="admin-summary">
+
+            <div class="summary-card">
+                <h3 id="total-count">0</h3>
+                <p>Total Projectors</p>
+            </div>
+
+            <div class="summary-card">
+                <h3 id="available-count">0</h3>
+                <p>Available</p>
+            </div>
+
+            <div class="summary-card">
+                <h3 id="borrowed-count">0</h3>
+                <p>Not Available</p>
+            </div>
+
+        </section>
+
+        <div class="table-container">
+
+            <h3>Projector Records</h3>
+
+            <p id="admin-message"></p>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Projector</th>
+                        <th>Availability</th>
+                        <th>Date Borrowed</th>
+                        <th>Date Returned</th>
+                        <th>Borrowed By</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="projector-table">
+
+                    <tr>
+                        <td colspan="7">Loading records...</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='admin.js') }}"></script>
+
+</body>
+</html>

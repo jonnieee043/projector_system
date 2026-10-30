@@ -1,0 +1,305 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #edf1f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* CHATBOT */
+
+.chat-container {
+    width: 100%;
+    max-width: 650px;
+    height: 85vh;
+    min-height: 450px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    background: #16354d;
+    color: white;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #287eaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 19px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #d5e3ec;
+}
+
+#chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message {
+    padding: 12px 15px;
+    border-radius: 12px;
+    max-width: 85%;
+    line-height: 1.6;
+    font-size: 14px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.bot {
+    background: #edf3f7;
+    color: #263746;
+    align-self: flex-start;
+}
+
+.user {
+    background: #176b91;
+    color: white;
+    align-self: flex-end;
+}
+
+#typing {
+    padding: 8px 20px;
+    color: #777;
+    font-size: 12px;
+}
+
+footer {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #176b91;
+}
+
+button {
+    background: #176b91;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #105473;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.disclaimer {
+    text-align: center;
+    color: #888;
+    font-size: 11px;
+    padding: 0 10px 12px;
+    margin: 0;
+}
+
+/* ADMIN DASHBOARD */
+
+.admin-page {
+    display: block;
+    padding: 30px;
+}
+
+.admin-container {
+    max-width: 1400px;
+    margin: auto;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #16354d;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.admin-header h2 {
+    margin: 0;
+}
+
+.admin-header p {
+    margin-bottom: 0;
+    color: #d5e3ec;
+}
+
+.admin-header a {
+    color: white;
+    text-decoration: none;
+    background: #287eaa;
+    padding: 10px 15px;
+    border-radius: 7px;
+}
+
+.admin-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.summary-card {
+    background: #edf3f7;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.summary-card h3 {
+    color: #176b91;
+    font-size: 28px;
+    margin: 0;
+}
+
+.summary-card p {
+    margin-bottom: 0;
+    color: #52616d;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.table-container h3 {
+    color: #16354d;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 950px;
+}
+
+th, td {
+    padding: 13px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+    font-size: 13px;
+}
+
+th {
+    background: #16354d;
+    color: white;
+}
+
+.status-available {
+    color: #16834a;
+    font-weight: bold;
+}
+
+.status-borrowed {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.action-buttons button {
+    padding: 8px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.edit-button {
+    background: #d69e24;
+}
+
+.delete-button {
+    background: #c0392b;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 0;
+    }
+
+    .chat-container {
+        height: 100dvh;
+        min-height: 0;
+        border-radius: 0;
+    }
+
+    .message {
+        max-width: 92%;
+    }
+
+    .admin-page {
+        padding: 10px;
+    }
+
+    .admin-container {
+        padding: 12px;
+    }
+
+    .admin-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}

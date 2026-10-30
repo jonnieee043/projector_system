@@ -1,0 +1,7 @@
+
+Flask
+google-genai
+python-dotenv
+mysql-connector-python
+gunicorn
+tzdata

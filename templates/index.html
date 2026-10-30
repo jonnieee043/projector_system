@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projector Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <header>
+            <div class="logo">P</div>
+
+            <div>
+                <h2>Projector Assistant</h2>
+                <p>Your projector troubleshooting guide</p>
+            </div>
+        </header>
+
+        <main id="chat-box">
+
+            <div class="message bot">
+                Hello! Welcome to Projector Assistant.
+
+                I can help you with projector setup,
+                tutorials, troubleshooting, and projector availability.
+
+                What can I help you with?
+            </div>
+
+        </main>
+
+        <div id="typing" hidden>
+            Assistant is typing...
+        </div>
+
+        <footer>
+
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Ask about your projector..."
+                maxlength="4000"
+                autocomplete="off"
+            >
+
+            <button id="send-btn">
+                Send
+            </button>
+
+        </footer>
+
+        <p class="disclaimer">
+            AI-generated answers. Always check your
+            projector's official manual for model-specific instructions.
+        </p>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
