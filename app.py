@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 from google import genai
 from dotenv import load_dotenv
 from pathlib import Path
@@ -194,16 +194,22 @@ def answer_inventory_question(message):
     )
 
 
-# CHATBOT PAGE
+# HOMEPAGE - REDIRECT TO ADMIN PAGE
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return redirect(url_for("admin"))
 
 
 # ADMIN PAGE
 @app.route("/admin")
 def admin():
     return render_template("admin.html")
+
+
+# CHATBOT TEST PAGE
+@app.route("/chatbot")
+def chatbot():
+    return render_template("index.html")
 
 
 # GET PROJECTOR RECORDS
