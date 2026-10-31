@@ -11,11 +11,11 @@ load_dotenv(Path(__file__).resolve().parent / ".env")
 
 def get_connection():
     return mysql.connector.connect(
-        host=os.getenv("DB_HOST") or os.getenv("MYSQLHOST"),
-        user=os.getenv("DB_USER") or os.getenv("MYSQLUSER"),
-        password=os.getenv("DB_PASSWORD") or os.getenv("MYSQLPASSWORD") or "",
-        database=os.getenv("DB_NAME") or os.getenv("MYSQLDATABASE"),
-        port=int(os.getenv("DB_PORT") or os.getenv("MYSQLPORT") or 3306)
+        host=os.getenv("MYSQLHOST"),
+        user=os.getenv("MYSQLUSER"),
+        password=os.getenv("MYSQLPASSWORD"),
+        database=os.getenv("MYSQLDATABASE"),
+        port=int(os.getenv("MYSQLPORT") or 3306)
     )
 
 
